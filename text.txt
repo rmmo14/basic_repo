@@ -1,0 +1,110 @@
+Last login: Wed Oct 21 20:18:00 on ttys000
+renemontoya@Renes-Air ~ % cd CodingDojo
+renemontoya@Renes-Air CodingDojo % mkdir firstgit
+renemontoya@Renes-Air CodingDojo % cd firstgit
+renemontoya@Renes-Air firstgit % git clone https://github.com/rmmo14/basic_repo.git
+Cloning into 'basic_repo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 596 bytes | 99.00 KiB/s, done.
+renemontoya@Renes-Air firstgit % ls    
+basic_repo
+renemontoya@Renes-Air firstgit % cd basic_repo
+renemontoya@Renes-Air basic_repo % touch index.html style.css script.js text.txt
+renemontoya@Renes-Air basic_repo % code .                                  main
+renemontoya@Renes-Air basic_repo % git status                              main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	index.html
+	script.js
+	style.css
+	text.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+renemontoya@Renes-Air basic_repo % git add .                               main
+renemontoya@Renes-Air basic_repo % git status                              main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   index.html
+	new file:   script.js
+	new file:   style.css
+	new file:   text.txt
+
+renemontoya@Renes-Air basic_repo % git commit -m "adding initial html"     main
+[main bb5b6fe] adding initial html
+ 4 files changed, 17 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 script.js
+ create mode 100644 style.css
+ create mode 100644 text.txt
+renemontoya@Renes-Air basic_repo % git push origin master                  main
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/rmmo14/basic_repo.git'
+renemontoya@Renes-Air basic_repo % git status                              main
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+renemontoya@Renes-Air basic_repo % git push                                main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 622 bytes | 311.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rmmo14/basic_repo.git
+   4cfd2dc..bb5b6fe  main -> main
+renemontoya@Renes-Air basic_repo % git status                              main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	reset.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+renemontoya@Renes-Air basic_repo % git add .                               main
+renemontoya@Renes-Air basic_repo % git push                                main
+Everything up-to-date
+renemontoya@Renes-Air basic_repo % git status                              main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   index.html
+	new file:   reset.css
+
+renemontoya@Renes-Air basic_repo % git commit -m "adding reset"            main
+[main c8e562f] adding reset
+ 2 files changed, 167 insertions(+)
+ create mode 100644 reset.css
+renemontoya@Renes-Air basic_repo % git push                                main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1023 bytes | 1023.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rmmo14/basic_repo.git
+   bb5b6fe..c8e562f  main -> main
+renemontoya@Renes-Air basic_repo % git status                              main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+renemontoya@Renes-Air basic_repo %                                         main
